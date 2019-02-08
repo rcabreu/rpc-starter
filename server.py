@@ -1,10 +1,10 @@
-from SimpleXMLRPCServer import SimpleXMLRPCServer
-from SimpleXMLRPCServer import SimpleXMLRPCRequestHandler
+from xmlrpc.server import SimpleXMLRPCServer
+from xmlrpc.server import SimpleXMLRPCRequestHandler
 
 class RequestHandler(SimpleXMLRPCRequestHandler):
     rpc_paths = ('/PUCMM',)
 
-server = SimpleXMLRPCServer(("foocamp.org.do", 2332),
+server = SimpleXMLRPCServer(("0.0.0.0", 2332),
                             requestHandler=RequestHandler)
 
 def primeros(x):

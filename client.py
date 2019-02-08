@@ -1,4 +1,4 @@
-import xmlrpclib
+from xmlrpc import client
 
-s = xmlrpclib.ServerProxy('http://foocamp.org.do:2332/PUCMM')
-print s.primeros(5)
+s = client.ServerProxy('http://13.92.98.159:2332/PUCMM')
+print (s.primeros(5))
